@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv*/
+venv/
+.env
+.env.*
+!.env.example
+
+# Models and checkpoints
+*.pt
+*.pth
+*.onnx
+*.engine
+*.plan
+*.safetensors
+
+# Generated artifacts
+runs/
+output/
+*.log
+*.bak
+
+# Local metadata
+.DS_Store
+.ipynb_checkpoints/
+
+# Review image rights before publishing datasets
+dataset/
+dataset-v2/
+weights/
+audit.json
+split_manifest.csv
