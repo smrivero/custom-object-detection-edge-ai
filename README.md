@@ -1,6 +1,12 @@
-# Custom Object Detection on NVIDIA Jetson
+# Custom YOLO26: From Dataset to Edge Deployment
 
-End-to-end custom object detection using YOLO26, PyTorch and NVIDIA Jetson.
+Training and deploying a custom object detection model on NVIDIA Jetson Orin Nano Super.
+
+**A complete applied ML workflow: dataset auditing, annotation correction, YOLO26 fine-tuning, CUDA training and live camera inference.**
+
+The model targets two custom categories, mate and thermos. The implementation uses 99 curated images and documents annotation corrections, dataset splitting, training configuration and real-camera evaluation.
+
+Observed false positives and missed detections are documented to assess generalization beyond the training data.
 
 ## Overview
 
@@ -65,6 +71,15 @@ Dataset images are not included in the repository.
 | `live_coco_detection.py` | COCO pretrained model comparison |
 | `DATASET_NOTES.md` | Dataset preparation and quality assessment |
 
+## Engineering Highlights
+
+- Custom dataset preparation and annotation quality control.
+- Training and validation split management.
+- YOLO26 fine-tuning using CUDA-enabled PyTorch.
+- Real-time camera inference on NVIDIA Jetson.
+- Custom class detection and COCO model comparison.
+- Analysis of false positives and generalization limitations.
+
 ## Requirements
 
 - NVIDIA Jetson Orin Nano Super 8 GB
@@ -112,7 +127,7 @@ Mate detection was less reliable, and false positives occurred, including miscla
 
 These observations indicate limitations in generalization beyond the training dataset.
 
-## Future Evaluation
+## Evaluation Metrics
 
 Recommended measurements:
 
@@ -124,7 +139,3 @@ Recommended measurements:
 - End-to-end FPS
 
 No unverified accuracy or production-readiness claims are made.
-
-## Project Scope
-
-Dataset preparation, annotation quality, PyTorch training, model evaluation, GPU deployment and real-time Edge AI inference.
